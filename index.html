@@ -11,7 +11,7 @@
                                 
     <style>
         /* Add your custom styles here */
-    
+
         .slika{
             max-width: 100%;
             width: 100%;
@@ -54,9 +54,7 @@
             vertical-align: middle;
         }
 
-    #navbarNav{
-        font-family: Lato, sans-serif;
-    }
+
 
     /* .card-body:hover{
         background-color: rgb(194, 134, 22);
@@ -224,7 +222,7 @@
                                     </tr>
                                     <tr>
                                         <td>Materijal: Štof</td>
-                                       <td style="text-align:right"><i class="fa-solid fa-gift"data-toggle="tooltip" data-placement="top" onclick = showSweetAlert() title="Na poklon dobijate maramu"></i></td>
+                                       <td style="text-align:right"><i class="fa-solid fa-gift"data-toggle="tooltip" data-placement="top" onclick = showSweetAlert1() title="Na poklon dobijate maramu"></i></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -243,7 +241,7 @@
                                     </tr>
                                     <tr>
                                         <td>Materijal: Štof</td>
-                                       <td style="text-align:right"><i class="fa-solid fa-gift"data-toggle="tooltip" data-placement="top" onclick = showSweetAlert() title="Na poklon dobijate maramu" ></i></td>
+                                       <td style="text-align:right"><i class="fa-solid fa-gift"data-toggle="tooltip" data-placement="top" onclick = showSweetAlert1() title="Na poklon dobijate maramu" ></i></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -318,7 +316,7 @@
                 </div>
 
                 <script>
-                    function showSweetAlert() {
+function showSweetAlert1() {
     Swal.fire({
   title: "Poklon!",
   text: "Uz ovaj proizvod, dobijate maramu na poklon!",
@@ -329,8 +327,25 @@
   confirmButtonColor: '#eaa72f',
 });
 }
+function showSweetAlert2() {
+
+Swal.fire({
+  text: "Mogucnost izrade u vise dezena.",
+  imageUrl: "slike/logo_kontakt.png",
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: "Custom image",
+  confirmButtonColor: '#eaa72f',
+  customClass: {
+      popup: 'custom-font-class',
+    }
+
+});
+}
                 </script>
         
+
+    
                 <!-- Third Row -->
                 <div class="col-md-4 mb-4">
                     <div class="card" style = border-color:gold>
@@ -344,7 +359,7 @@
                                     </tr>
                                     <tr>
                                         <td>Materijal: Štof</td>
-                                       <td style="text-align:right"><i class="fa-solid fa-star" style="color: #eaa72f;margin:5px"></i><i class="fa-solid fa-circle"></i></td>
+                                       <td style="text-align:right"><i class="fa-solid fa-star" onclick = showSweetAlert2() style="color: #eaa72f;margin:5px"></i><i class="fa-solid fa-circle"></i></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -363,7 +378,7 @@
                                     </tr>
                                     <tr>
                                         <td>Materijal: Štof</td>
-                                       <td style="text-align:right"><i class="fa-solid fa-star" style="color: #eaa72f;margin:5px"></i><i class="fa-solid fa-circle" id="cycleIcon" data-toggle="tooltip" data-placement="top" title="Promeni boju" onclick="cycleImages()"></i>                                       </button></td>
+                                       <td style="text-align:right"><i class="fa-solid fa-star" onclick = showSweetAlert2() style="color: #eaa72f;margin:5px"></i><i class="fa-solid fa-circle" id="cycleIcon" data-toggle="tooltip" data-placement="top" title="Promeni boju" onclick="cycleImages()"></i>                                       </button></td>
                                     </tr>
                                 </tbody>
                             </table>
