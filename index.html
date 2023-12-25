@@ -8,7 +8,7 @@
     <link href="https://fonts.cdnfonts.com/css/royal-2" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-                                
+
     <style>
         /* Add your custom styles here */
 
@@ -19,30 +19,18 @@
 
         /* Poslati Urosu */
         .navbar-brand img {
-            max-height: 80px; /* Adjust the height of your logo */
-        }/* Poslati Urosu */
-    
-        .navbar-nav {
-            margin: auto;
+            max-height: 180px; /* Adjust the height of your logo */
         }
-        .nav-item {
-            margin: 0 10px;
-            font-size:26px;
-            color:black;
-            
-        }
-        .nav-link{
-            color:rgb(214, 158, 54);                                                                                                
-        }
+
+
+
         .bebe{
             color:rgb(234, 167, 47);
         }
         td{
             font-size:18px
         }
-        #specijalni{
-            margin-left:60px;
-        }
+
 
         .footer {
             position: relative;
@@ -59,12 +47,12 @@
     /* .card-body:hover{
         background-color: rgb(194, 134, 22);
         transition: 2s all;
-        
+
     } */
     /* tbody:hover{
         color:white;
         transition: 2s all;
-        
+
     } */
 
     .card-img, .card-img-top{
@@ -94,19 +82,18 @@
     font-weight: 600;
 }
 
-        @media screen and (max-width: 768px) {
+/* Responsivnes za fon */
+
+         @media screen and (max-width: 768px) {
         .navbar-brand img {
-            max-height: 50px; /* Adjust the height of your logo */
+            max-height: 40px;
+            max-width: 50px;
         }
         .navbar-nav{
             text-align:center;
             margin-top:0px;
         }
-        #specijalni{
-            margin-left:0px;
-            margin-top:0px;
 
-        }
         #myBtn {
   display: none;
   position: fixed;
@@ -114,22 +101,49 @@
   right: 10px;
   z-index: 99;
   font-size: 18px;
- 
+
   background-color: rgb(234, 167, 47);
   color: white;
   cursor: pointer;
   padding: 15px;
- 
+
 }
         }
 
-        
+/* Responsivnes za fon */
     </style>
     <title>Bebe de Sud</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="slike/logo_konjic.png" width="60" height="50" class="d-inline-block align-top" alt="Logo">
+          </a>
 
-<nav class="navbar navbar-expand-lg navbar-light" >
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav" style="font-size:22px;">
+              <li class="nav-item">
+                <a class="nav-link" href="#o_nama_id">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#kolekcija_id">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- <nav class="navbar navbar-expand-lg navbar-light" >
     <div class="container" id ="specijalni">
         <a class="navbar-brand" href="#">
             <img src="slike/logo_konjic.png" class="logo_heder">
@@ -155,10 +169,10 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->
 
 
- 
+
     <img class="slika" src="slike/zelenalogoskracena.png" alt="Your Image" >
 
 
@@ -187,7 +201,7 @@
         </div>
         <h2 class="text-center"><span class = bebe>Naši proizvodi
         </span></h2>
-        
+
         <div class="container mt-4">
             <div class="row">
                 <!-- First Row -->
@@ -248,7 +262,7 @@
                         </div>
                     </div>
                 </div>
-        
+
 
 
 
@@ -343,9 +357,9 @@ Swal.fire({
 });
 }
                 </script>
-        
 
-    
+
+
                 <!-- Third Row -->
                 <div class="col-md-4 mb-4">
                     <div class="card" style = border-color:gold>
@@ -368,7 +382,7 @@ Swal.fire({
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card" style = border-color:gold>
-                        <img src="slike/proizvodi/crvenisesir.jpg"  class="card-img-top" alt="Image 1" id="mainImage">
+                        <img src="slike/proizvodi/crvenisesir2.jpg"  class="card-img-top" alt="Image 1" id="mainImage">
                         <div class="card-body">
                             <table class="table table-borderless">
                                 <tbody>
@@ -390,24 +404,24 @@ Swal.fire({
 
         <script>
             // Dugme koje menja boju na klik
-        const images = ["slike/proizvodi/crvenisesir.jpg","slike/proizvodi/zelenisesir.jpg"]; // Add more images if needed
+        const images = ["slike/proizvodi/crvenisesir2.jpg","slike/proizvodi/zelenisesir.jpg"]; // Add more images if needed
         let currentIndex = 0;
-        
+
         function cycleImages() {
           const mainImage = document.getElementById("mainImage");
           const cycleIcon = document.getElementById("cycleIcon");
-          
+
           // Update the src attribute with the next image in the cycle
           currentIndex = (currentIndex + 1) % images.length;
           mainImage.src = images[currentIndex];
-        
+
           // Set icon color based on the current image
           cycleIcon.style.color = currentIndex === 0 ? "#615929" : "#922926";
-          
+
         }
-        
+
         document.getElementById("cycleIcon").style.color = "#615929";
-        
+
           </script>
     </div>
 <hr>
@@ -439,11 +453,156 @@ Swal.fire({
           <div class="col-md-2"style="padding:2px">
             <img src="slike/galerija/ova4.JPG" class="img-fluid gold-border" alt="Image 4">
           </div>
-        
-          
-        </div> -->
 
-        
+
+        </div> -->
+        <!-- Karusel -->
+        <div id="carouselExampleControls" class="carousel" >
+            <div class="carousel-inner">
+              <div class="carousel-item active" style = border:none>
+                <div class="card" style = box-shadow:none>
+                  <div class="img-wrapper"><img src="slike/galerija/ova1.JPG" alt="Image 1"></div>
+                </div>
+              </div>
+              <div class="carousel-item" >
+                <div class="card" style = box-shadow:none>
+                  <div class="img-wrapper"><img src="slike/galerija/ova2.JPG" alt="Image 2"></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card" style = box-shadow:none>
+                  <div class="img-wrapper"><img src="slike/galerija/ova3.JPG" alt="Image 3"></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card" style = box-shadow:none>
+                  <div class="img-wrapper"><img src="slike/galerija/ova4.JPG" alt="Image 4"></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card" style = box-shadow:none>
+                  <div class="img-wrapper"><img src="slike/galerija/ova5.JPG" alt="Image 5"></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card" style = box-shadow:none>
+                  <div class="img-wrapper"><img src="slike/galerija/ova5.JPG" alt="Image 6"></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card" style = box-shadow:none>
+                  <div class="img-wrapper"><img src="slike/galerija/ova1.JPG" alt="Image 7"></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card" style = box-shadow:none>
+                  <div class="img-wrapper"><img src="slike/galerija/ova1.JPG" alt="Image 8"></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card" style = box-shadow:none>
+                  <div class="img-wrapper"><img src="slike/galerija/ova1.JPG" alt="Image 9"></div>
+                </div>
+              </div>
+              <!-- Add more carousel items with images as needed -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+            </button>
+          </div>
+
+          <style>
+            .carousel-inner {
+              padding: 1em;
+            }
+            .card {
+              margin: 0 0.5em;
+              box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+              border: none;
+            }
+            .carousel-control-prev,
+            .carousel-control-next {
+                background-color: #eaa72f;
+                width: 1.5em; /* Adjust the width as needed */
+                height: 1.5em; /* Adjust the height as needed */
+                border:none;
+                border-radius: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 1em; /* Adjust the font size as needed */
+            }
+
+
+
+            @media (min-width: 768px) {
+              .carousel-item {
+                margin-right: 0;
+                flex: 0 0 20%; /* Adjust the width to show 5 items */
+                display: block;
+              }
+              .carousel-inner {
+                display: flex;
+              }
+            }
+            .card .img-wrapper {
+              max-width: 100%;
+              height: 13em;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .card img {
+              max-height: 100%;
+            }
+            @media (max-width: 767px) {
+              .card .img-wrapper {
+                height: 17em;
+              }
+            }
+          </style>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              let multipleCardCarousel = document.querySelector("#carouselExampleControls");
+
+
+              if (window.matchMedia("(min-width: 768px)").matches) {
+                let carousel = new bootstrap.Carousel(multipleCardCarousel, {
+                  interval: false, // Disable automatic sliding
+                  wrap: false, // Prevent wrapping at the end
+                });
+
+
+                let carouselWidth = document.querySelector(".carousel-inner").scrollWidth;
+                let cardWidth = document.querySelector(".carousel-item").offsetWidth;
+                let scrollPosition = 0;
+
+
+                document.querySelector("#carouselExampleControls .carousel-control-next").addEventListener("click", function () {
+                  if (scrollPosition < carouselWidth - cardWidth * 4) {
+                    scrollPosition += cardWidth;
+                    document.querySelector("#carouselExampleControls .carousel-inner").scroll({ left: scrollPosition, behavior: 'smooth' });
+                  }
+                });
+
+
+                document.querySelector("#carouselExampleControls .carousel-control-prev").addEventListener("click", function () {
+                  if (scrollPosition > 0) {
+                    scrollPosition -= cardWidth;
+                    document.querySelector("#carouselExampleControls .carousel-inner").scroll({ left: scrollPosition, behavior: 'smooth' });
+                  }
+                });
+              } else {
+                multipleCardCarousel.classList.add("slide");
+              }
+            });
+          </script>
+
       </div>
 <br>
 <hr>
@@ -473,9 +632,9 @@ Swal.fire({
                         <p><b>Rok izrade je 7 dana</b>
                         </p>
                         </div>
-        
+
         </div><hr></div>
-       
+
         <div class="social-icons">
           <a href="https://www.instagram.com/bebe.du.sud/" target="_blank"><i class="fab fa-instagram"style = "color:rgb(234, 167, 47)"></i></a>
           <a href="https://www.tiktok.com/@bebe.du.sud" target="_blank"><i class="fab fa-tiktok"style = "color:rgb(234, 167, 47)"></i></a>
@@ -607,5 +766,8 @@ function topFunction() {
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="jquery-3.7.1.min.js"></script>
+
 </body>
 </html>
