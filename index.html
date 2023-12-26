@@ -14,7 +14,10 @@
 
 
     <style>
-
+@font-face {
+  font-family: Great Vibes;
+  src: url(GreatVibes-Regular.ttf);
+}
         .glavna_slika{
             max-width: 100%;
             width: 100%;
@@ -92,19 +95,35 @@
     font-family: Lato, sans-serif;
     font-weight: 600;
     opacity: 80%;
+    font-size:16.5px;
 }
 
 .cena_artikla {
     font-family: Lato, sans-serif;
     font-weight: 300;
     opacity: 70%;
+    font-size:16px;
+
+}
+#artikal{
+  border: solid #EAA72F 4px;
+    border-radius: 20px;
+}
+#artikal:hover {
+    background-color: #F3F1F1;
 }
 
 .materijal_artikla {
     font-family: Lato, sans-serif;
     font-weight: 500;
+    font-size:15px;
+
+
 }
 
+.table{
+  margin-bottom:0em !important;
+}
 .kontakt_info {
     font-family: Lato, sans-serif
 }
@@ -133,7 +152,6 @@
   z-index: 99;
   font-size: 18px;
 
-  background-color: rgb(234, 167, 47);
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -199,11 +217,11 @@
 
     <div class="container mt-4" id="o_nama_id">
         <h4 class="text-center" id="sekcija">O NAMA</h4>
-        <div class="text-center">
-            <hr class="my-4" style="width: 5%;
-            height: 2px;
-            background-color: rgb(234, 167, 47);">
-        </div>
+            <hr class="my-4" style="width: 4%;
+            height: 3px;
+            background-color: #EAA72F;
+            border-radius: 3px;">
+
         <h1 class="text-center" id="naslov_sekcije"> Ko smo mi i čime se bavimo?</h1>
         <p class="text-center-justify col-md-10 mx-auto" id = tekst_o_nama> Svog sina sam od puzanja vodila na profesionalno fotografisanje.
              Scenografije su bile raznolike, ali često u "royal" stilu. Nisam mogla da odvedem dete na takvo fotografisanje obučeno bilo kako. I tako počinje ova priča. Pregledala sam svaku prodavnicu odeće koja postoji u ovom gradu. Ništa. I onda se dosetim! Ja ću da mu šijem odeću! Krenem u potragu za materijalima, nađem baš sve što mi treba. I tako, jedno fotkanje, vrtićko, slave, rođendani, Nova godina, Božić… Svi se oduševljavaju, na ulici komentarišu! I jedne noći mi se javi ideja - ako ja imam problem da pronađem neku atraktivnu stvar, sigurno imaju i druge mame. Zašto ne bih šila i njima? Ideja je stajala par meseci dok nisam osmislila svaki detalj. A onda sam počela! Pelerina je otvorila vrata moje mašte. Hvala za svaku porudžbinu!
@@ -212,18 +230,18 @@
 
     <div class="container mt-4" id="kolekcija_id">
         <h4 class="text-center" id="sekcija">KOLEKCIJA</h4>
-        <div class="text-center">
-            <hr class="my-4" style="width:5%;
-            height: 2px;
-            background-color: rgb(234, 167, 47);">
-        </div>
+            <hr class="my-4" style="width: 4%;
+            height: 3px;
+            background-color: #EAA72F;
+            border-radius: 3px;">
+
         <h1 class="text-center" id="naslov_sekcije">Naši proizvodi</h1>
 
         <div class="container mt-4">
             <div class="row">
                 <!-- First Row -->
                 <div class="col-md-4 mb-4">
-                    <div class="card" style = border-color:gold>
+                    <div class="card" id="artikal">
                         <img src="slike/proizvodi/kaput.jpg" class="card-img-top" alt="Karo kaput">
                         <div class="card-body">
                             <table class="table table-borderless">
@@ -234,7 +252,7 @@
                                     </tr>
                                     <tr>
                                         <td class="materijal_artikla">Materijal: Vuna</td>
-                                        <td style="text-align:right"></td>
+                                        <td style="text-align:right;visibility: hidden;"><i class="fa-solid fa-circle" ></i>                                       </button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -242,8 +260,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card" style = border-color:gold>
-                        <img src="slike/proizvodi/crvenajakna.jpg" class="card-img-top" alt="Crvena jakna">
+                  <div class="card" id="artikal">
+                    <img src="slike/proizvodi/crvenajakna.jpg" class="card-img-top" alt="Crvena jakna">
                         <div class="card-body">
                             <table class="table table-borderless">
                                 <tbody>
@@ -261,8 +279,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card" style = border-color:gold>
-                        <img src="slike/proizvodi/odelo.jpg" class="card-img-top" alt="Plišano odelo">
+                  <div class="card" id="artikal">
+                    <img src="slike/proizvodi/odelo.jpg" class="card-img-top" alt="Plišano odelo">
                         <div class="card-body">
                             <table class="table table-borderless">
                                 <tbody>
@@ -282,8 +300,8 @@
 
                 <!-- Second Row -->
                 <div class="col-md-4 mb-4">
-                    <div class="card" style = border-color:gold>
-                        <img src="slike/proizvodi/amblemkosulja.jpg" class="card-img-top" alt="Amblem košulja">
+                  <div class="card" id="artikal">
+                    <img src="slike/proizvodi/amblemkosulja.jpg" class="card-img-top" alt="Amblem košulja">
                         <div class="card-body">
                             <table class="table table-borderless">
                                 <tbody>
@@ -293,7 +311,7 @@
                                     </tr>
                                     <tr>
                                         <td class="materijal_artikla">Materijal: Pamuk</td>
-                                        <td style="text-align:right"></td>
+                                        <td style="text-align:right;visibility: hidden;"><i class="fa-solid fa-circle" ></i>                                       </button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -301,8 +319,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card" style = border-color:gold>
-                        <img src="slike/proizvodi/satenkosulja.jpg" class="card-img-top" alt="Saten košulja">
+                  <div class="card" id="artikal">
+                    <img src="slike/proizvodi/satenkosulja.jpg" class="card-img-top" alt="Saten košulja">
                         <div class="card-body">
                             <table class="table table-borderless">
                                 <tbody>
@@ -312,7 +330,7 @@
                                     </tr>
                                     <tr>
                                         <td class="materijal_artikla">Materijal: Saten</td>
-                                       <td style="text-align:right"></td>
+                                        <td style="text-align:right;visibility: hidden;"><i class="fa-solid fa-circle" ></i>                                       </button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -320,8 +338,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card" style = border-color:gold>
-                        <img src="slike/proizvodi/rezerva.jpg" class="card-img-top" alt="Viskozna rolka">
+                    <div class="card" id="artikal">
+                        <img src="slike/proizvodi/rolka.JPG" class="card-img-top" alt="Viskozna rolka" id="mainImage3">
                         <div class="card-body">
                             <table class="table table-borderless">
                                 <tbody>
@@ -331,7 +349,7 @@
                                     </tr>
                                     <tr>
                                         <td class="materijal_artikla">Materijal: Viskoza</td>
-                                        <td style="text-align:right"></td>
+                                        <td style="text-align:right;"><i class="fa-solid fa-circle" id="cycleIcon3" data-toggle="tooltip" data-placement="top" title="Promeni boju" onclick="cycleImages3()"></i>                                       </button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -344,9 +362,9 @@ function showSweetAlert1() {
   Swal.fire({
   title: "Poklon!",
   text: "Uz ovaj proizvod dobijate maramu na poklon!",
-  imageUrl: "slike/marama.jpg",
-  imageWidth: 300,
-  imageHeight: 500,
+  imageUrl: "slike/proizvodi/marama.jpg",
+  imageWidth: 150,
+  imageHeight:250,
   imageAlt: "Custom image",
   confirmButtonColor: '#eaa72f',
 });
@@ -371,8 +389,8 @@ function showSweetAlert2() {
 
                 <!-- Third Row -->
                 <div class="col-md-4 mb-4">
-                    <div class="card" style = border-color:gold>
-                        <img src="slike/proizvodi/sivebermude.jpg" class="card-img-top" alt="Bermude">
+                  <div class="card" id="artikal">
+                    <img src="slike/proizvodi/sivebermude.jpg" class="card-img-top" alt="Bermude" id="mainImage2">
                         <div class="card-body">
                             <table class="table table-borderless">
                                 <tbody>
@@ -382,16 +400,16 @@ function showSweetAlert2() {
                                     </tr>
                                     <tr>
                                         <td class="materijal_artikla">Materijal: Vuna</td>
-                                        <td style="text-align:right"><i class="fa-solid fa-star" onclick = showSweetAlert2() style="color: #eaa72f;margin:5px"></i><i class="fa-solid fa-circle"></i></td>
-                                    </tr>
+                                        <td style="text-align:right"><i class="fa-solid fa-star" onclick = showSweetAlert2() style="color: #eaa72f;margin:5px"></i><i class="fa-solid fa-circle" id="cycleIcon2" data-toggle="tooltip" data-placement="top" title="Promeni boju" onclick="cycleImages2()"></i>                                       </button></td>
+                                      </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card" style = border-color:gold>
-                        <img src="slike/proizvodi/crvenisesir2.jpg"  class="card-img-top" alt="Šešir" id="mainImage">
+                  <div class="card" id="artikal">
+                    <img src="slike/proizvodi/crvenisesir.jpg"  class="card-img-top" alt="Šešir" id="mainImage">
                         <div class="card-body">
                             <table class="table table-borderless">
                                 <tbody>
@@ -413,7 +431,11 @@ function showSweetAlert2() {
 
         <script>
             // Dugme koje menja boju na klik
-        const images = ["slike/proizvodi/crvenisesir2.jpg","slike/proizvodi/zelenisesir.jpg"]; // Add more images if needed
+        const images = ["slike/proizvodi/crvenisesir.jpg","slike/proizvodi/zelenisesir.jpg"]; // Add more images if needed
+        const images2 = ["slike/proizvodi/sivebermude.jpg","slike/proizvodi/probabermude.jpg"]; // Add more images if needed
+        const images3 = ["slike/proizvodi/rolka.jpg","slike/proizvodi/plavarolka.jpg"]; // Add more images if needed
+
+
         let currentIndex = 0;
 
         function cycleImages() {
@@ -431,16 +453,53 @@ function showSweetAlert2() {
 
         document.getElementById("cycleIcon").style.color = "#615929";
 
+
+
+
+        function cycleImages2() {
+          const mainImage2 = document.getElementById("mainImage2");
+          const cycleIcon2 = document.getElementById("cycleIcon2");
+
+          // Update the src attribute with the next image in the cycle
+          currentIndex = (currentIndex + 1) % images2.length;
+          mainImage2.src = images2[currentIndex];
+
+          // Set icon color based on the current image
+          cycleIcon2.style.color = currentIndex === 0 ?  "darkgreen":"#2c3144";
+
+        }
+
+        document.getElementById("cycleIcon2").style.color = "darkgreen";
+
+
+        function cycleImages3() {
+          const mainImage3 = document.getElementById("mainImage3");
+          const cycleIcon3 = document.getElementById("cycleIcon3");
+
+          // Update the src attribute with the next image in the cycle
+          currentIndex = (currentIndex + 1) % images3.length;
+          mainImage3.src = images3[currentIndex];
+
+          // Set icon color based on the current image
+          cycleIcon3.style.color = currentIndex === 0 ?  "darkgreen":"#2c3144";
+
+        }
+
+        document.getElementById("cycleIcon3").style.color = "darkgreen";
+
           </script>
+
+
     </div>
 
     <div class="container-fluid" id="galerija_id">
         <h4 class="text-center" id="sekcija">GALERIJA</h4>
-        <div class="text-center">
-            <hr class="my-4" style="width: 5%;
-            height: 2px;
-            background-color: rgb(234, 167, 47);">
-        </div>
+
+            <hr class="my-4" style="width: 4%;
+            height: 3px;
+            background-color: #EAA72F;
+            border-radius: 3px;">
+
         <h1 class="text-center" id="naslov_sekcije">Naši prinčevi</h1>
 
         <!-- <div class="row justify-content-center" style = padding:0>
@@ -649,11 +708,12 @@ function showSweetAlert2() {
 <br>
 <div class="container-fluid" id = kontakt_id>
     <h4 class="text-center" id="sekcija">KONTAKT</h4>
-    <div class="text-center">
-        <hr class="my-4" style="width: 5%;
-        height: 2px;
-        background-color: rgb(234, 167, 47);">
-    </div>
+
+        <hr class="my-4" style="width: 4%;
+        height: 3px;
+        background-color: #EAA72F;
+        border-radius: 3px;">
+
     <h1 class="text-center" id="naslov_sekcije">Više informacija</h1>
     <div class="row">
     <div class="col-md-12 contact-info">
@@ -684,15 +744,15 @@ function showSweetAlert2() {
           <a href="https://www.tiktok.com/@bebe.du.sud" target="_blank"><i class="fab fa-tiktok" style = "color: #EAA72F"></i></a>
         </div>
         <br>
-        <p><i class="fa-solid fa-map-pin" style = "color: #EAA72F"></i> Beograd,Srbija</p>
-        <p><i class="fa-solid fa-envelope" style = "color: #EAA72F"></i> bebedusud.clothes@gmail.com</p>
-        <p><i class="fa-solid fa-phone" style = "color: #EAA72F"></i> +381/60-720-2303</p>
+        <p class="kontakt_social"><i class="fa-solid fa-map-pin" style = "color: #EAA72F"></i> Beograd,Srbija</p>
+        <p class="kontakt_social"><i class="fa-solid fa-envelope" style = "color: #EAA72F"></i> <a href="mailto:bebedusud.clothes@gmail.com" style="color:black">bebedusud.clothes@gmail.com</a></p>
+        <p class="kontakt_social"><i class="fa-solid fa-phone" style = "color: #EAA72F"></i><a href="tel:+381607202303" style="color:black">+381/60-720-2303</a></p>
     </div>
     </div>
   </div>
 
 
-  <button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-primary rounded-circle">
+  <button onclick="topFunction()" id="myBtn" title="Go to top" class="btn rounded-circle">
     <i class="fa-solid fa-chevron-up"></i>
   </button>
   <style>
@@ -719,20 +779,23 @@ function showSweetAlert2() {
   bottom: 15px;
   right: 15px;
   z-index: 99;
-  font-size: 22px;
+  font-size: 18px;
   border: none;
   outline: none;
-  background-color:;
   color: #EAA72F;
+  /* background-color:; */
   cursor: pointer;
-  padding: 15px;
+  padding: 10px;
 
 }
 
-#myBtn:hover {
+#myBtn:hover{
+  background-color: #f3f1f1 ;
+}
+/* #myBtn:hover {
   background-color:;
   color:;
-}
+} */
   </style>
 
    <script>
@@ -801,8 +864,9 @@ function topFunction() {
 <footer class="bg-body-tertiary text-center text-lg-start">
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: #EAA72F; color:white">
-      © 2021 Copyright:
-      <a class="text-body" href="https://mdbootstrap.com/">Bébé du Sud</a>.🎠
+
+      ©2021 Copyright:
+      <a class="text-body" href="">Bébé du Sud</a>🎠 - by <a href="https://www.linkedin.com/in/uro%C5%A1-stevani%C4%87-ba7440253/" style="color:white">Uroš</a> & <a href="https://www.ngrubii.com/" style="color:white">Nenad</a>
     </div>
     <!-- Copyright -->
   </footer>
